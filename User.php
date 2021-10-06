@@ -11,6 +11,7 @@ class User
     protected $discount;
     protected $level;
 
+
     public function __construct($_name, $_lastName, $_email, $_level = 1)
     {
 
