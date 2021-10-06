@@ -17,20 +17,21 @@ class CreditCard
         $this->expires = $_expires;
     }
 
-    public function setCC($number)
-    {
-        if (is_numeric($number) && strlen($number) == 16) {
+    // private function setCC($number)
+    // {
+    //     if (is_numeric($number) && strlen($number) == 16) {
 
-            return $this->number = $number;
-        } else {
-            throw new Exception("Invalid CC number");
-        }
-    }
+    //         return $this->number = $number;
+    //     } else {
+
+    //         throw new Exception("Invalid CC number");
+    //     }
+    // }
 
 
     public function getCCNumber()
     {
-        if (!isset($this->number) || strlen($this->number) != 16) {
+        if (!isset($this->number) || strlen($this->number) != 16 || $this->number == null) {
 
             throw new Exception("no CC inserted");
         } else {

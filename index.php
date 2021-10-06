@@ -48,12 +48,9 @@ $book = new Book('Lord of the Rings', 'Fantasy', ' J.R.Tolkien', 'Fantasy', '452
 
 
         <div>
-            <? $CreditCard1 = new CreditCard('1231456987456321', 'Michau', 'Wado', '09/26'); ?>
-            <p>Check CC: <?php try {
-                                echo $CreditCard1->setCC('1231231231231254');
-                            } catch (Exception $e) {
-                                echo $e->getMessage();
-                            } ?></p>
+            <?php
+            $CreditCard1 = new CreditCard('1231456987456312', 'Michau', 'Wado', '09/26');
+            ?>
 
             <!-- if card set show -->
             <p> Credit Card: <?php try {
