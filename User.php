@@ -33,12 +33,12 @@ class User
 
     protected function setDiscount()
     {
-        if ($this->level > 1) {
-            $this->discount = 10;
-        } else if ($this->level > 3) {
-            $this->discount = 25;
+        if ($this->level <= 1) {
+            return $this->discount = 10;
+        } elseif ($this->level > 1 && $this->level <= 3) {
+            return $this->discount = 25;
         } else {
-            $this->discount = 0;
+            return $this->discount = 0;
         }
     }
 
