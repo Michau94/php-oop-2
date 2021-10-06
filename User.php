@@ -27,7 +27,6 @@ class User
 
     public function  getUserName()
     {
-
         return $this->customerInfo();
     }
 
@@ -45,13 +44,11 @@ class User
     public function getDiscount()
     {
         $this->setDiscount();
-        return " Il tuo sconto è : $this->discount";
+        return  $this->discount;
     }
 
-
-    protected function getCollocation()
+    public function getUserLevel()
     {
-
-        return $this->collocation;
+        return $this->level;
     }
 }

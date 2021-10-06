@@ -2,19 +2,19 @@
 require_once __DIR__ . '/models/products/Book.php';
 require_once __DIR__ . '/models/products/Game.php';
 require_once __DIR__ . '/User.php';
+require_once __DIR__ . '/utils/functions.php';
 
+// User
+$user1 = new User('Michau', 'Wadowski', 'micio@miao.it', '2');
 
+// Prodotti
 $item = new Product('Lor of the Rings', 'Cashier', 20, 'Accesory');
-
+$callofDuty = new Game('Call of Duty', 'Shooter - Section', 'Activision', 'Shooter', 60, 'Ps4');
 $book = new Book('Lord of the Rings', 'Fantasy', ' J.R.Tolkien', 'Fantasy', '452', 25);
 
-$callofDuty = new Game('Call of Duty', 'Shooter - Section', 'Activision', 'Shooter', 60, 'Ps4');
 
 
-// var_dump($item);
-// var_dump($callofDuty);
-// var_dump($book);
-// var_dump($user1);
+
 ?>
 
 
@@ -31,10 +31,19 @@ $callofDuty = new Game('Call of Duty', 'Shooter - Section', 'Activision', 'Shoot
 <body>
 
     <section>
-        <?php $user1 = new User('Michau', 'Wadowski', 'micio@miao.it'); ?>
 
         <h1> <?= $user1->getUserName() ?></h1>
-        <h3><?= $user1->getDiscount() ?></h3>
+        <h1>Il tuo livello è: <?= $user1->getUserLevel() ?></h1>
+        <h3>Il tuo sconto è: <?= $user1->getDiscount() ?>%</h3>
+
+
+        <!-- Prodotto scelto -->
+
+        <h1> Prodotto scelto: <?= $callofDuty->getName() ?></h1>
+        <h1><?= $callofDuty->getInfo() ?></h1>
+        <h2>Il prezzo è: €<?= $callofDuty->getPrice() ?></h2>
+        <h4>Il prezzo scontanto è: €<?= finalPrice($callofDuty->getPrice(), $user1->getDiscount()) ?></h4>
+        </h3>
         <div>
 
         </div>
