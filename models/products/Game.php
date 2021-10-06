@@ -14,4 +14,9 @@ class Game extends Product
         $this->genre = $_genre;
         $this->platform = $_platform;
     }
+
+    public function getInfo()
+    {
+        return "Produttore: $this->producer, Genere:$this->genre  Piattaforma:$this->platform";
+    }
 }

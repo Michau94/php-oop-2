@@ -15,4 +15,14 @@ class Book extends Product
         $this->genre = $_genre;
         $this->pages = $_pages;
     }
+
+    public function getBookPrice()
+    {
+        return $this->getPrice();
+    }
+
+    public function getInfo()
+    {
+        return "Autore: $this->author    Genere:$this->genre  Pagine:$this->pages";
+    }
 }

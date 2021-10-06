@@ -2,6 +2,7 @@
 
 
 
+
 class Product
 {
 
@@ -19,15 +20,26 @@ class Product
         $this->type = $_type;
     }
 
-    protected function getName()
+    public function getName()
     {
 
         return $this->name;
     }
 
-    protected function getCollocation()
+    public function getCollocation()
     {
 
         return $this->collocation;
+    }
+
+    public function getPrice()
+    {
+
+        return $this->price;
+    }
+
+    public function getInfo()
+    {
+        return "Tipo:$this->type";
     }
 }
