@@ -6,13 +6,12 @@ require_once __DIR__ . '/utils/functions.php';
 require_once __DIR__ . '/./CreditCard.php';
 
 // User
-$user1 = new User('Michau', 'Wadowski', 'micio@miao.it', '2');
+$user1 = new User('Michau', 'Wadowski', 'micio@miao.it', 2);
 
 // Prodotti
 $item = new Product('Lor of the Rings', 'Cashier', 20, 'Accesory');
 $callofDuty = new Game('Call of Duty', 'Shooter - Section', 'Activision', 'Shooter', 60, 'Ps4');
 $book = new Book('Lord of the Rings', 'Fantasy', ' J.R.Tolkien', 'Fantasy', '452', 25);
-
 
 
 
@@ -36,6 +35,7 @@ $book = new Book('Lord of the Rings', 'Fantasy', ' J.R.Tolkien', 'Fantasy', '452
         <h1> <?= $user1->getUserName() ?></h1>
         <h1>Il tuo livello è: <?= $user1->getUserLevel() ?></h1>
         <h3>Il tuo sconto è: <?= $user1->getDiscount() ?>%</h3>
+
 
 
         <!-- Prodotto scelto -->

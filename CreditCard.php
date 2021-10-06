@@ -33,7 +33,7 @@ class CreditCard
     {
         if (!isset($this->number) || strlen($this->number) != 16 || $this->number == null) {
 
-            throw new Exception("no CC inserted");
+            throw new Exception("Invalid CC ");
         } else {
 
             return $this->number;
